@@ -1,0 +1,4 @@
+pipeline,accuracy,macro_f1,weighted_f1
+Speech-Only,0.9988,0.9988,0.9988
+Text-Only (GLOVE),0.2842,0.2135,0.2132
+Multimodal (GLOVE),0.2699,0.2065,0.2062
