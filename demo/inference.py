@@ -1,38 +1,25 @@
-import os, sys, tempfile
+import os
+import sys
+import tempfile
 import numpy as np
 import torch
 import torch.nn as nn
 
-# -- Correct path setup for your structure -------------------------------------
-# demo/inference.py is at:
-#   project_multimodal_emotion_recognition/demo/inference.py
-# project/ is at:
-#   project_multimodal_emotion_recognition/project/
-# utils/ is at:
-#   project_multimodal_emotion_recognition/project/utils/
-
-DEMO_DIR    = os.path.dirname(os.path.abspath(__file__))
-ROOT_DIR    = os.path.dirname(DEMO_DIR)
-PROJECT_DIR = os.path.join(ROOT_DIR, "project")
-UTILS_DIR   = os.path.join(PROJECT_DIR, "utils")
+# ---------------- PATH FIX ----------------
 
 DEMO_DIR = os.path.dirname(os.path.abspath(__file__))
-
 ROOT_DIR = os.path.dirname(DEMO_DIR)
+
+# ADD ROOT TO PYTHON PATH
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
 
 PROJECT_DIR = os.path.join(ROOT_DIR, "project")
 
-UTILS_DIR = os.path.join(PROJECT_DIR, "utils")
+print("ROOT_DIR:", ROOT_DIR)
+print("PROJECT_DIR:", PROJECT_DIR)
 
-# ---------------- GLOVE PATH ----------------
-
-GLOVE_PATH = os.path.join(
-    PROJECT_DIR,
-    "models",
-    "glove.6B.100d.txt"
-)
-
-print("Using GloVe:", GLOVE_PATH)
+# ---------------- IMPORTS ----------------
 
 from project.utils.speech_preprocessing import (
     load_and_preprocess,
