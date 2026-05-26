@@ -1,8 +1,18 @@
-# Multimodal Emotion Recognition (TESS Dataset)
+🎭 Multimodal Emotion Recognition System
 
-A complete end-to-end system for emotion recognition using **speech only**, **text only**, and **multimodal (speech + text)** inputs, built with PyTorch.
+A complete deep learning based **Multimodal Emotion Recognition** system that predicts human emotions using:
+
+- 🎙️ Speech Audio
+- ✍️ Text Input
+- 🔀 Speech + Text Fusion
+
+Built using **PyTorch**, **CNN + BiLSTM**, **Transformer Encoder**, and deployed with an interactive **Streamlit Live UI**.
 
 ---
+
+# 🚀 Live Demo
+
+👉 Streamlit App: https://multimodal-emotion-recognition-aqgmwmlqntvyzdmwxm7bod.streamlit.app/
 
 ## Table of Contents
 1. [Project Structure](#project-structure)
@@ -15,39 +25,34 @@ A complete end-to-end system for emotion recognition using **speech only**, **te
 
 ---
 
-## Project Structure
-
-```
-project/
-├── models/
-│   ├── speech_pipeline/
-│   │   ├── model.py          # CNN + BiLSTM model
-│   │   ├── train.py          # Training script
-│   │   └── test.py           # Evaluation script
-│   ├── text_pipeline/
-│   │   ├── model.py          # BiLSTM + Transformer model
-│   │   ├── train.py
-│   │   └── test.py
-│   └── fusion_pipeline/
-│       ├── model.py          # Cross-modal attention fusion
-│       ├── dataset.py        # Multimodal dataset
-│       ├── train.py
-│       └── test.py
-├── utils/
-│   ├── data_loader.py        # Manifest building & splits
-│   ├── speech_preprocessing.py
-│   ├── text_preprocessing.py
-│   ├── metrics.py
-│   └── plotting.py
-├── results/
-│   ├── accuracy_tables.csv
-│   └── plots/
-├── smoke_test.py             # Architecture validation (no data needed)
+multimodal-emotion-recognition/
+│
+├── demo/                     # Streamlit live UI
+│   ├── app.py
+│   └── inference.py
+│
+├── project/
+│   ├── checkpoints/
+│   │   ├── speech/
+│   │   ├── text/
+│   │   └── fusion/
+│   │
+│   ├── models/
+│   │   ├── speech_pipeline/
+│   │   ├── text_pipeline/
+│   │   └── fusion_pipeline/
+│   │
+│   ├── utils/
+│   │   ├── speech_preprocessing.py
+│   │   ├── text_preprocessing.py
+│   │   ├── data_loader.py
+│   │   └── plotting.py
+│   │
+│   └── __init__.py
+│
+├── requirements.txt
 ├── README.md
-└── requirements.txt
-```
-
----
+└── .gitignore
 
 ## Architecture Overview
 
