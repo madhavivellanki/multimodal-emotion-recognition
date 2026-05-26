@@ -12,11 +12,7 @@ glove.6B.*
 # Dataset
 TESS_data/
 
-# Model checkpoints
-checkpoints/
 
-# NumPy arrays
-*.npy
 
 # OS files
 .DS_Store
