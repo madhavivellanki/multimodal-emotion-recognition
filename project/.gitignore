@@ -17,3 +17,4 @@ TESS_data/
 # OS files
 .DS_Store
 Thumbs.db
+glove.6B.100d.txt
