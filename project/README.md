@@ -13,7 +13,7 @@
 
 **GitHub:** https://github.com/madhavivellanki/multimodal-emotion-recognition
 
-**Live Demo:** https://your-streamlit-link.streamlit.app
+**Live Demo:** https://multimodal-emotion-recognition-aqgmwmlqntvyzdmwxm7bod.streamlit.app/
 
 </div>
 
